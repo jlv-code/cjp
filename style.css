@@ -1,0 +1,1025 @@
+/*
+Theme Name: Turpial
+Author: [jlv] - José L. Viéitez
+Author URI: http://jlv.com.ve
+Version: 1.0
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/copyleft/gpl.html
+Description: Turpial es un WordpressTheme diseñado y desarrollado para Circuito Judicial Penal del Estado Bolivariano de Miranda
+Tags: yellow, orange, black, gray
+*/
+
+/*/
+	BASICS STYLES
+/*/
+
+*,
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+	-o-transition: .2s;
+	-ms-transition: .2s;
+	-moz-transition: .2s;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 14px;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary,
+img {
+  display: block;
+}
+
+img {
+	border: none;
+}
+
+a {
+	border: none;
+	background-color: transparent;
+	text-decoration: none;
+	color: rgba(218,154,0,1);
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+p {
+	margin-top: 15px;
+}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+ul {}
+
+ol {}
+
+/*
+	Estilos básicos de Wordpress
+*/
+
+.wp-caption {
+	display: block;
+}
+
+.wp-caption-text {
+	padding: 5px 3px;
+	color: #fff;
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: .7em;
+	background-color: rgba(210,35,42,1);
+}
+
+.aligncenter {
+	display: block;
+	margin: 15px auto 0;
+}
+
+.alignnone,
+.alignleft,
+.alignright {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.alignleft {
+	margin-right: 15px;
+	float: left;
+}
+
+.alignright {
+	margin-left: 15px;
+	float: right;
+}
+
+/* UTILITIES */
+
+/* Light Gray */
+
+.u-txt-lightgray {
+	color: rgba(238,238,238,1);
+}
+
+.u-bg-lightgray {
+	background-color: rgba(238,238,238,1);
+}
+
+.u-br-lightgray {
+	border-color: rgba(238,238,238,1);
+}
+
+/* Dark Gray */
+
+.u-txt-darkgray {
+	color: rgba(85,85,85,1);
+}
+
+.u-bg-darkgray {
+	background-color: rgba(85,85,85,1);
+}
+
+.u-br-darkgray {
+	border-color: rgba(85,85,85,1);
+}
+
+/* Black */
+
+.u-txt-black {
+	color: rgba(30,30,30,1);
+}
+
+.u-bg-black {
+	background-color: rgba(30,30,30,1);
+}
+
+.u-br-black {
+	border-color: rgba(30,30,30,1);
+}
+
+/* Yellow */
+
+.u-txt-yellow {
+	color: rgba(244,213,54,1);
+}
+
+.u-bg-yellow {
+	background-color: rgba(244,213,54,1);
+}
+
+.u-br-yellow {
+	border-color: rgba(244,213,54,1);
+}
+
+/* Orange */
+
+.u-txt-orange {
+	color: rgba(218,154,0,1);
+}
+
+.u-bg-orange {
+	background-color: rgba(218,154,0,1);
+}
+
+.u-br-orange {
+	border-color: rgba(218,154,0,1);
+}
+
+/* Red */
+
+.u-txt-red {
+	color: rgba(217,3,0,1);
+}
+
+
+.u-bg-red {
+	background-color: rgba(217,3,0,1);
+}
+
+.u-br-red {
+	border-color: rgba(217,3,0,1);
+}
+
+/* Dark Red */
+
+.u-txt-darkred {
+	color: rgba(164,2,0,1);
+}
+
+.u-bg-darkred {
+	background-color: rgba(164,2,0,1);
+}
+
+.u-br-darkred {
+	border-color: rgba(164,2,0,1);
+}
+
+/* Sizes */
+
+.u-paragraph-size {
+	font-size: 1.1em;
+}
+
+.u-big-title-size2 {
+	font-size: 2em;
+}
+
+/* General */
+
+.u-inner {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.u-br-none {
+	border-color: transparent;
+}
+
+/* Iconos */
+
+.u-ico-defensa-publica {
+	background-image: url(static/images/defensa-publica.png);
+}
+
+.u-ico-dem {
+	background-image: url(static/images/dem.png);
+}
+
+.u-ico-defensoria-del-pueblo {
+	background-image: url(static/images/defensoria-del-pueblo.png);
+}
+
+.u-ico-ministerio-publico {
+	background-image: url(static/images/ministerio-publico.png);
+}
+
+.u-ico-tsj {
+	background-image: url(static/images/tsj.png);
+}
+
+/* COMPONENTS & MODIFIERS */
+
+.Block {
+	display: block;
+}
+
+.Block-inner {
+	display: block;
+}
+
+.Box {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.Box-inner {
+	display: inline-block;
+}
+
+
+.Box--justify {
+	width: 100%;
+	text-align: justify;
+}
+
+.Box--justify:after {
+	content: "";
+	display: inline-block;
+	width: 100%;
+}
+
+.Box--center {
+	display: block;
+	text-align: justify;
+}
+
+.Box--one {
+	width: 680px;
+}
+
+.Box--two {
+	width: 300px;
+	margin-left: 15px;
+}
+
+.Landing {
+	display: block;
+}
+
+.Header {
+	display: block;
+}
+
+.Header-inner {
+	display: block;
+}
+
+.Head {
+	display: block;
+}
+
+.Head--top {
+	padding: 15px 0;
+}
+
+.Head--middle {
+	position: relative;
+	overflow: hidden;
+	height: 300px;
+}
+
+.Head--middle img {
+	position:absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	height: auto;
+}
+
+.Head--bottom {
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+}
+
+.Logo {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.MainMenu {
+	display: block;
+}
+
+.MainMenu .menu-main-container {
+	display: block;
+}
+
+.MainMenu .menu-main-container .menu {
+	display: block;
+}
+
+.MainMenu .menu-main-container .menu li {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 20px;
+}
+
+.MainMenu .menu-main-container .menu li:first-child {
+	margin-left: 0;
+}
+
+.MainMenu .menu-main-container .menu li a {
+	position: relative;
+	display: block;
+	padding: 15px 10px;
+	color: rgba(30,30,30,1);
+	font-size: 1.3em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.MainMenu .menu-main-container .menu li a:hover {
+	color: rgba(244,213,54,1);
+	background-color: rgba(30,30,30,.8);
+}
+
+.MainMenu .menu-main-container .menu li a:before {
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	right: 0;
+	content: "";
+	border-bottom: 5px solid transparent;
+}
+
+.MainMenu .menu-main-container .menu li a:hover:before {
+	border-bottom: 5px solid rgba(244,213,54,.8); 
+}
+
+.Search {
+	display: none;
+}
+
+.Footer {
+	display: block;
+}
+
+.Footer-inner {
+	display: block;
+}
+
+.Foot {
+	display: block;
+}
+
+.Footer-icon {
+	margin: 0 30px;
+	vertical-align: middle;
+}
+
+.Foot--top {
+	padding: 15px 0;
+	border-top-width: 5px;
+	border-top-style: solid;
+	text-align: center;
+}
+
+.Foot--bottom {
+	padding: 30px 0;
+	text-align: center;
+}
+
+.Rights {
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+/* INDEX */
+
+.Courts {
+	padding: 50px 0 30px 0;
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+	background-image: url(static/images/bg-courts.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+}
+
+.Courts-inner {
+	display: block;
+}
+
+.BigButton {
+	display: block;
+	padding: 35px 30px 35px 100px;
+	width: 180px;
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-image: url(static/images/ico-courts.png);
+	background-repeat: no-repeat;
+	background-position: 30px center;
+}
+
+.BigButton:hover {
+	background-color: rgba(164,2,0,1);
+}
+
+.BigButton-smallText {
+	font-size: 1.5em;
+}
+
+.BigButton-bigText {
+	font-size: 2.5em;
+}
+
+.News {
+	padding: 50px 0;
+}
+
+.News-inner {
+	display: block;
+}
+
+.News-title {
+	position: relative;
+	display: inline-block;
+	margin-bottom: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	font-size: 2em;
+}
+
+.News-title:before {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 100%;
+	content: "";
+	width: 1000%;
+	background-color: rgba(218,154,0,1);
+}
+
+.News-more {
+	position: relative;
+	display: inline-block;
+	text-align: right;
+	margin-top: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	font-size: 2em;
+}
+
+.News-more:after {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 100%;
+	content: "";
+	width: 1000%;
+	background-color: rgba(218,154,0,1);
+}
+
+.News--alignRight {
+	text-align: right;
+}
+
+/* Hearings */
+
+.Hearings {
+	display: block;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.Hearings-title {
+	margin-bottom: 50px;
+	font-size: 2em;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.Hearings-list {
+	display: block;
+}
+
+.Hearing-head {
+	margin-bottom: 1px;
+	padding: 10px  0;
+	font-size: 1.6em;
+}
+
+.Hearing-headDate {
+	margin-left: 5px;
+	width: 100px;
+}
+
+.Hearing-headNumOfActs {
+	margin-left: 5px;
+	width: 150px;
+}
+
+.Hearing-headRecords {
+	margin-left: 5px;
+	width: 200px;
+}
+
+.Hearing-headKindOfAct {
+	margin-left: 5px;
+	width: 200px;
+}
+
+.Hearing {
+	padding: 10px 0;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	font-size: 1.2em;
+}
+
+/*.Hearing-title {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 10px;
+	font-size: 2em;
+}
+
+.Hearing:hover {
+	opacity: 1;
+}*/
+
+.Hearing-date {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	width: 100px;
+}
+
+.Hearing-numOfActs {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	width: 150px;
+	text-align: center;
+}
+
+.Hearing-RecordsActs {
+	display: inline-block;
+	vertical-align: top;
+	width: 405px;
+}
+
+.Hearing-innerRecordsActs {
+	padding: 3px 0;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+}
+
+.Hearing-records {
+	margin-left: 10px;
+	width: 190px;
+}
+
+.Hearing-acts {
+	margin-left: 10px;
+	width: 190px;
+}
+
+/*.Hearing-headquarters {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 5px;
+	margin-right: 10px;
+	font-size: 1.5em;
+}
+
+.Hearing-courts {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 5px;
+	margin-right: 10px;
+	font-size: 1.5em;
+}*/
+
+/* SingleHearings - single-hearing.php */
+
+.SingleHearing {
+	display: block;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.SingleHearing-title {
+	margin-bottom: 10px;
+	font-size: 2.5em;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.SingleHearing-status {
+	margin-bottom: 10px;
+	font-size: 2em;
+}
+
+.SingleHearing-date {
+	margin-bottom: 20px;	
+	padding: 3px 5px;
+	font-size: 1.2em;
+}
+
+.SingleHearing-headquarters,
+.SingleHearing-court,
+.SingleHearing-prosecutor,
+.SingleHearing-defense {
+	padding: 0 5px;
+	font-size: 1.2em;
+	width: 48%;
+}
+
+.SingleHearing-victim,
+.SingleHearing-imputed {
+	padding: 3px 5px;
+	font-size: 1.2em;
+	border-top-width: 5px;
+	border-top-style: solid;
+	width: 48%;
+}
+
+.SingleHearing-observations {
+	font-size: 1.2em;
+}
+
+.SingleHearing--observations {
+	padding: 0 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.SingleHearing-category,
+.SingleHearing-tags {
+	margin-top: 20px;
+	padding: 0 5px;
+	font-size: 1.2em;
+	width: 48%;
+}
+
+/* Category */
+
+.Category {
+	display: block;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.Category-title {
+	margin-bottom: 50px;
+	font-size: 2em;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+/* Search */
+
+.Search {
+	display: block;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.Search-title {
+	margin-bottom: 50px;
+	font-size: 2em;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.Search-list {
+	display: block;
+}
+
+/* Search - Modifiers */
+
+.Search--titleSearch {
+	display: block;
+}
+
+/* Page */
+
+.Page {
+	display: block;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.Page-title {
+	margin-bottom: 30px;
+	font-size: 2em;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+/* Posts Components */
+
+.Post {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.Post-image {
+	display: block;
+}
+
+.Post-image img {
+	width: 100%;
+	height: auto;
+}
+
+.Post-title,
+.Post-date,
+.Post-excerpt,
+.Post-content {
+	display: block;
+	text-align: left;
+}
+
+.Post-link {
+	display: block;
+}
+
+/* Post - Modifiers - Index */
+
+.Post--home {
+	width: 230px;
+}
+
+.Post--homeTitle {
+	margin-top: 10px;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+/* Posts - Modifiers - Category */
+
+.Post--category {
+	margin-bottom: 50px;
+	width: 330px;
+}
+
+.Post--imageCategory {
+	display: block;
+}
+
+.Post--titleCategory {
+	margin-top: 10px;
+	font-size: 1.8em;
+}
+
+.Post--dateCategory {
+	margin-top: 10px;
+	padding-top: 5px;
+	font-size: 0.8em;
+	border-top-width: 1px;
+	border-top-style: solid;
+}
+
+.Post--posttypeCategory {
+	margin-top: 20px;
+	font-size: 1.2em;
+}
+
+.Post--excerptCategory {
+	display: block;
+	margin-top: 10px;
+}
+
+.Post--center {
+	display: block !important;
+
+}
+
+/* Post - Modifiers - Search */
+
+.Post--search {
+	display: block;
+	width: 100%;
+	margin: 0 0 20px 0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	
+}
+
+.Post--contentSearch {
+	display: inline-block;
+	width: 488px;
+	margin: 0 0 0 15px;
+}
+
+.Post--dateSearch {
+	display: inline-block;
+	color: rgba(238,238,238,1);
+	font-size: 1.2em;
+	padding: 3px;
+}
+
+.Post--titleSearch {
+	display: inline-block;
+	font-size: 1.5em;
+}
+
+.Post--linkSearch {
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 3px;
+}
+
+/* Posts - Modifiers - Page */
+
+
+.Post--contentPage {
+	display: block;
+	margin-top: 10px;
+}
+
+/* Posts - Modifiers - Sidebar */
+
+
+.Post--listSidebar {
+	display: block;
+	margin-top: 10px;
+}
+
+.Post--listNotes {
+	width: 290px;
+}
+
+.Post--titleList {
+	font-size: 1.8em;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.Post--sidebarTitle {
+	margin-top: 10px;
+	font-size: 1.2em;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted; ;
+}
+
+/* Posts - Modifiers - Single */
+
+.Post--singleTitle {
+	display: inline-block;
+	font-size: 2em;
+	width: 596px;
+}
+
+.Post--singleDate {
+	display: inline-block;
+	font-size: 1.2em;
+	color: rgba(238,238,238,1);
+	width: 75px;
+	padding: 3px;
+}
+
+.Post--singleTag {
+	font-size: 1.2em;
+}
+
+.Post--singleContent {
+	font-size: 1.2em;
+	margin: 5px 0 0 0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	padding-bottom: 15px;
+}
+
+.Post--postsRelated {
+	width: 215px;
+}
+
+.Post--titleRelated {
+	font-size: 1.2em;
+}
+
+.PostRelated {
+	display: block;
+	margin: 15px 0 0 0;
+}
+
+.PostRelated-title {
+	display: block;
+	font-size: 1.5em;
+	margin: 0 0 15px 0;
+}
+
+.PostRelated-list {
+	display: block;
+}
+
+.Single {
+	margin: 50px 0;
+}
+
+/*Pagination*/
+
+.Pagination {
+	margin-top: 50px;
+	padding-top: 16px;
+	text-align: center;
+}
+
+.page-numbers {
+	padding: 5px 10px 5px 12px;
+	color: rgba(80,80,80,1);
+	background-color: rgba(230,231,232,1);
+	border: 1px solid #ccc;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.current {
+	color: rgba(160,117,0,1);
+	border-color: rgba(201,141,0,1);
+	background-color: rgba(218,154,0,1);  
+}
+
+.dots {
+	border: none;
+	background: none;
+}
+
+.page-numbers:hover {
+	background-color: rgba(232, 195, 95, 1); 
+}
+
+.current:hover {
+	background-color: rgba(232, 195, 95, 1);
+
+}
+
