@@ -129,6 +129,20 @@ ol {}
 	float: right;
 }
 
+.widget {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.titlewidget {
+	padding: 10px;
+	font-size: 1.4em;
+}
+
+.textwidget {
+	padding: 10px;
+}
+
 /* UTILITIES */
 
 /* Light Gray */
