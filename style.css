@@ -450,6 +450,14 @@ ol {}
 	vertical-align: middle;
 }
 
+.Footer-icon img {
+	opacity: 1;
+}
+
+.Footer-icon:hover img {
+	opacity: .7;
+}
+
 .Foot--top {
 	padding: 15px 0;
 	border-top-width: 5px;
