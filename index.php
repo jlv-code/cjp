@@ -52,14 +52,20 @@
 				</div>
 			</div>
 			<div class="Box Box--justify">
-				<?php $p = new WP_Query(array('post_type'=>'post', 'posts_per_page'=>'4')) ?>
+				<?php $p = new WP_Query(array('post_type'=>'post', 'posts_per_page'=>'8')) ?>
 				<?php if ($p->have_posts()): while($p->have_posts()): $p->the_post() ?>
 				<div class="Post Box Post--home">
 					<div class="Post-image">
 						<a class="Post-link" href="<?php the_permalink() ?>"><?php the_post_thumbnail('lsMediun') ?></a>
 					</div>
+					<div class="Post-date Post--homeDate u-bg-darkgray">
+						<a class="Post-link" href="<?php the_permalink() ?>"><?php the_time('d M/Y') ?></a>
+					</div>
 					<div class="Post-title">
-						<a class="Post-link Post--homeTitle u-txt-black" href="<?php the_permalink() ?>"><?php the_title() ?></a>
+						<a class="Post-link Post--homeTitle u-txt-orange" href="<?php the_permalink() ?>"><?php the_title() ?></a>
+					</div>
+					<div class="Post-excerpt">
+						<a class="Post-link Post--homeExcerpt u-txt-darkgray" href="<?php the_permalink() ?>"><?php the_excerpt() ?></a>
 					</div>
 				</div>
 				<?php endwhile; endif; wp_reset_postdata() ?>
