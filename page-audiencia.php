@@ -3,7 +3,7 @@
 	/**
 		@author: jlv
 		@file: page-audiencia.php
-		@version: 1.0
+		@version: 2.0
 		Template Name: Página de Audiencias
 	 */
 

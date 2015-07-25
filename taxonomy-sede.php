@@ -3,7 +3,7 @@
 	/**
 		@author: jlv
 		@file: taxonomy-sede.php
-		@version: 1.0
+		@version: 2.0
 	 */
 
 ?>
@@ -17,20 +17,37 @@
 				<div class="Hearings-title Block u-txt-orange u-br-orange"><?php single_term_title('Sede &raquo; ') ?></div>
 				<div class="Hearings-list Block">
 					<div class="Block">
-						<?php if(have_posts()): while(have_posts()): the_post() ?>
-						<?php $headquarters = $court = ''; ?>
-						<?php $municipalities = get_the_terms(get_the_ID(),'sede') ?>
-						<?php foreach ($municipalities as $m) $headquarters .= $m->name.', '; ?>
-						<?php $headquarters = trim($headquarters,', '); ?>
-						<?php $courts = get_the_terms(get_the_ID(),'tribunal') ?>
-						<?php foreach ($courts as $c) $court .= $c->name.', '; ?>
-						<?php $court = trim($court,', '); ?>
-						<div class="Hearing u-br-orange <?php echo ($flag == true)?'u-bg-lightgray':''; ?>">
-							<div class="Hearing-date u-txt-lightgray u-bg-orange u-br-orange"><?php echo types_render_field("fecha", array('output'=>'normal')) ?></div>
-							<div class="Hearing-title u-txt-orange u-br-orange"><a class="Hearing-link u-txt-orange" href="<?php the_permalink() ?>"><?php the_title() ?></a></div>
-							<?php if ($headquarters!=''): ?><div class="Hearing-headquarters u-txt-darkgray u-paragraph-size"><?php echo $headquarters ?></div><?php endif ?>
-							<?php if ($court!=''): ?><div class="Hearing-courts u-txt-darkgray u-paragraph-size"> <?php echo $court ?></div><?php endif ?>
+						<div class="Hearing-head Block u-bg-orange u-txt-lightgray">
+							<div class="Hearing-headDate Box">Fecha</div>
+							<div class="Hearing-headNumOfActs Box">Número de actos</div>
+							<div class="Hearing-headRecords Box">Expedientes</div>
+							<div class="Hearing-headKinfOfAct Box">Tipo de Acto</div>
 						</div>
+						<?php if(have_posts()): while(have_posts()): the_post() ?>
+						
+						<?php $acts = types_child_posts("acto"); ?>
+						<?php $numOfActs = count($acts); ?>
+						<?php foreach ($acts as $act): ?>
+						<?php $titlesActs[] = $act->post_title ?>
+						<?php $kindOfActs[] = $act->fields['tipo-de-acto'] ?>
+						<?php endforeach; ?>
+
+						<div class="Hearing u-br-orange u-txt-darkgray <?php echo ($flag == true)?'u-bg-lightgray':''; ?>">
+							<div class="Hearing-date u-br-orange"><?php echo types_render_field("fecha", array('output'=>'normal')) ?></div>
+							<div class="Hearing-numOfActs Box"><?php echo $numOfActs ?></div>
+							<div class="Hearing-RecordsActs Box">
+								<?php for ($i=0;$i<count($titlesActs);$i++): ?>
+								<div class="Hearing-innerRecordsActs Block u-br-darkgray">
+									<div class="Hearing-records Box"><?php echo $titlesActs[$i] ?></div>
+									<div class="Hearing-acts Box"><?php echo $kindOfActs[$i] ?></div>
+								</div>
+								<?php endfor; ?>
+							</div>
+						</div>
+
+						<?php $numOfActs = '' ?>
+						<?php $titlesActs = array() ?>
+						<?php $kindOfActs = array() ?>
 						<?php $flag = ($flag == false)?true:false; ?>
 						<?php endwhile; endif; ?>
 						<?php wp_reset_postdata() ?>
