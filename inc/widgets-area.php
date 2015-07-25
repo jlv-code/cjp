@@ -7,9 +7,9 @@ function widgets_area() {
 		'id' => 'general',
 		'name' => 'Barra Lateral General',
 		'description' => 'La información aquí suminstrada, se mostrará en las sección de Noticias, Busqueda, Etiquetas, Categorías',
-		'before_widget' => '<div id="widget">',
+		'before_widget' => '<div class="widget u-bg-lightgray">',
 		'after_widget' => '</div>',
-		'before_title' => '<div class="titlewidget">',
+		'before_title' => '<div class="titlewidget u-bg-yellow u-txt-black">',
 		'after_title' => '</div>',
 		'empty_title'=> '',
 	));
