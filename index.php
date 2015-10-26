@@ -62,7 +62,7 @@
 						<a class="Post-link" href="<?php the_permalink() ?>"><?php the_time('d M/Y') ?></a>
 					</div>
 					<div class="Post-title">
-						<a class="Post-link Post--homeTitle u-txt-orange" href="<?php the_permalink() ?>"><?php the_title() ?></a>
+						<strong><a class="Post-link Post--homeTitle u-txt-darkgray" href="<?php the_permalink() ?>"><?php the_title() ?></a></strong>
 					</div>
 					<div class="Post-excerpt">
 						<a class="Post-link Post--homeExcerpt u-txt-darkgray" href="<?php the_permalink() ?>"><?php the_excerpt() ?></a>
