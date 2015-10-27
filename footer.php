@@ -20,6 +20,7 @@
 						<a class="Box Footer-icon" target="_blank" href="http://www.defensoria.gob.ve"><img src="<?php echo get_template_directory_uri() ?>/static/images/defensoria-del-pueblo.png" alt=""></a>
 						<a class="Box Footer-icon" target="_blank" href="http://www.ministeriopublico.gob.ve/"><img src="<?php echo get_template_directory_uri() ?>/static/images/ministerio-publico.png" alt=""></a>
 						<a class="Box Footer-icon" target="_blank" href="http://www.tsj.gob.ve/"><img src="<?php echo get_template_directory_uri() ?>/static/images/tsj.png" alt=""></a>
+						<a class="Box Footer-icon" target="_blank" href="http://enm.tsj.gob.ve/"><img src="<?php echo get_template_directory_uri() ?>/static/images/enm.png" alt=""></a>
 					</div>
 				</div>
 				<div class="Block Foot Foot--bottom u-bg-black">
